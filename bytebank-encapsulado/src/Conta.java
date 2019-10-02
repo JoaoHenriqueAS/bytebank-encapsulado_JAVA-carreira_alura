@@ -1,18 +1,19 @@
 
 public class Conta {
-	private double saldo;
-	private int agencia;
-	private int numero;
-	private Cliente titular;
+	private double saldo; //atributo de instacia
+	private int agencia; //atributo de instacia
+	private int numero; //atributo de instacia
+	private Cliente titular; //atributo de instacia
 	
-	private static int total;
+	private static int total; //static é um atributo da clase (ex: cada conta tem uma agencia, mas toda conta tem um total compartilhado)
 	
-	//Isso é um construtor || construtor é uma rotina de inicialização, diferente do metodo, ele não retorna nada
-	//Constutor só é executado uma unica vez, quando a classe é criada (quando vc constroe o objeto).
-	//O construtor só é executado quando tem um 'new', ou seja, ele vai criar outra Conta no caso
+	/*Isso é um construtor || construtor é uma rotina de inicialização, diferente do metodo, ele não retorna nada
+	Constutor só é executado uma unica vez, quando a classe é criada (quando vc constroe o objeto).
+	O construtor só é executado quando tem um 'new', ou seja, ele vai criar outra Conta no caso */
+	
 	public Conta(int agencia, int numero) {
-		total++;
-		System.out.println("O total de contas é = " + total);
+		Conta.total++;
+		System.out.println("O total de contas é = " + Conta.total);
 		this.agencia = agencia;
 		this.numero = numero;
 		System.out.println("Estou criando uma conta " + this.numero);
@@ -74,6 +75,10 @@ public class Conta {
 	
 	public Cliente getTitular() {
 		return titular;
+	}
+	
+	public static int getTotal() {
+		return total;
 	}
 
 }

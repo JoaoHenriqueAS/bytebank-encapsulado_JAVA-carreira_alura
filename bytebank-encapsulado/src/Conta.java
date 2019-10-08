@@ -1,4 +1,4 @@
-
+	
 public class Conta {
 	private double saldo; //atributo de instacia
 	private int agencia; //atributo de instacia
@@ -16,6 +16,7 @@ public class Conta {
 		System.out.println("O total de contas é = " + Conta.total);
 		this.agencia = agencia;
 		this.numero = numero;
+		this.saldo  = 100;
 		System.out.println("Estou criando uma conta " + this.numero);
 	}
 	
